@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\stark\\Downloads\\NotasDaFacul\\NotasDaFacul.Server\\NotasDaFacul.Server.csproj": {}
+    "C:\\Users\\MarlonOliveira\\Downloads\\NotasDaFacul\\NotasDaFacul.Server\\NotasDaFacul.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\stark\\Downloads\\NotasDaFacul\\NotasDaFacul.Server\\NotasDaFacul.Server.csproj": {
+    "C:\\Users\\MarlonOliveira\\Downloads\\NotasDaFacul\\NotasDaFacul.Server\\NotasDaFacul.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\stark\\Downloads\\NotasDaFacul\\NotasDaFacul.Server\\NotasDaFacul.Server.csproj",
+        "projectUniqueName": "C:\\Users\\MarlonOliveira\\Downloads\\NotasDaFacul\\NotasDaFacul.Server\\NotasDaFacul.Server.csproj",
         "projectName": "NotasDaFacul.Server",
-        "projectPath": "C:\\Users\\stark\\Downloads\\NotasDaFacul\\NotasDaFacul.Server\\NotasDaFacul.Server.csproj",
-        "packagesPath": "C:\\Users\\stark\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\stark\\Downloads\\NotasDaFacul\\NotasDaFacul.Server\\obj\\",
+        "projectPath": "C:\\Users\\MarlonOliveira\\Downloads\\NotasDaFacul\\NotasDaFacul.Server\\NotasDaFacul.Server.csproj",
+        "packagesPath": "C:\\Users\\MarlonOliveira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MarlonOliveira\\Downloads\\NotasDaFacul\\NotasDaFacul.Server\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\stark\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\MarlonOliveira\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\stark\\.nuget\\packages\\raizen.etcd.package": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,9 +50,13 @@
               "target": "Package",
               "version": "[8.*-*, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.6.2, )"
             }
           },
           "imports": [
@@ -78,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
