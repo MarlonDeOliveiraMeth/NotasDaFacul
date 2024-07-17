@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NotasDaFacul.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7758858b86976a46c795d0d4a4606aa7689afbe1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae4b85d32b7ecf2554bc7f442a9ac9a1d335d08a")]
 [assembly: System.Reflection.AssemblyProductAttribute("NotasDaFacul.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NotasDaFacul.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

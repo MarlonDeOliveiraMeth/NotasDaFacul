@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "yyXtlcwvL2RXBcr4JIHuCJgTYUMGMRit7wZMh4ez3v0=",
+  "Hash": "aJkenroQ+R985Oc2T1JBk98Y/v28IR/zjRM4E1chHQc=",
   "Source": "NotasDaFacul.Server",
   "BasePath": "_content/NotasDaFacul.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\stark\\Downloads\\NotasDaFacul\\notasdafacul.client\\notasdafacul.client.esproj",
+      "Identity": "C:\\Users\\MarlonOliveira\\Downloads\\NotasDaFacul\\notasdafacul.client\\notasdafacul.client.esproj",
       "Version": 2,
       "Source": "notasdafacul.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
