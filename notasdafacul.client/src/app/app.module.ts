@@ -5,10 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { GradeDetailsComponent } from './grade-details/grade-details.component';
+import { GradeDetailsFormComponent } from './grade-details/grade-details-form/grade-details-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GradeDetailsComponent,
+    GradeDetailsFormComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

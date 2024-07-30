@@ -1,0 +1,14 @@
+<app-grade-details-form />
+<table>
+  <tr *ngFor="let gd of service.list">
+    <td>
+      {{gd.course}}
+    </td>
+    <td>
+      {{gd.grade}}
+    </td>
+    <td>
+      {{gd.date}}
+    </td>
+  </tr>
+</table>
