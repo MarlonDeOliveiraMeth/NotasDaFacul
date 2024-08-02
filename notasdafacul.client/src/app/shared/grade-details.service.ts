@@ -10,6 +10,7 @@ export class GradeDetailsService {
 
   url: string = environment.apiBaseUrl + '/Grades'
   list: GradeDetails[] = [];
+  formData: GradeDetails = new GradeDetails();
   constructor(private http: HttpClient) { }
 
   refreshList() {

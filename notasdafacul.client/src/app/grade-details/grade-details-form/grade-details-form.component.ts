@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { GradeDetailsService } from '../../shared/grade-details.service';
+import { NgForm } from '@angular/forms'
 
 @Component({
   selector: 'app-grade-details-form',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './grade-details-form.component.css'
 })
 export class GradeDetailsFormComponent {
+  constructor(public service: GradeDetailsService) {
+  }
 
+  onSubmit(form: NgForm) {
+
+  }
 }

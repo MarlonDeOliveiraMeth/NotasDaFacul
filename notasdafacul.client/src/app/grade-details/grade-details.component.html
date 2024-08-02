@@ -34,23 +34,24 @@
     <mat-grid-tile>
       <mat-card class="card">
         <p class="card-title">Inserir nota</p>
+        <form #form="ngForm" (submit)="onSubmit(form)">
+          <mat-form-field appearance="outline" class="input-field">
+            <mat-label> Curso </mat-label>
+            <input matInput type="text" #course="ngModel" name="course" [(ngModel)]="service.formData.course">
+          </mat-form-field>
 
-        <mat-form-field appearance="outline" class="input-field">
-          <mat-label> Curso </mat-label>
-          <input matInput>
-        </mat-form-field>
+          <mat-form-field appearance="outline" class="input-field">
+            <mat-label> Nota </mat-label>
+            <input matInput type="number" #grade="ngModel" name="grade" [(ngModel)]="service.formData.grade">
+          </mat-form-field>
 
-        <mat-form-field appearance="outline" class="input-field">
-          <mat-label> Nota </mat-label>
-          <input matInput>
-        </mat-form-field>
+          <mat-form-field appearance="outline" class="input-field">
+            <mat-label> Data </mat-label>
+            <input matInput type="date" #date="ngModel" name="course" [(ngModel)]="service.formData.date">
+          </mat-form-field>
+        </form>
 
-        <mat-form-field appearance="outline" class="input-field">
-          <mat-label> Data </mat-label>
-          <input matInput>
-        </mat-form-field>
-
-        <button mat-flat-button>Enviar</button>
+        <button mat-flat-button type="submit">Enviar</button>
 
       </mat-card>
     </mat-grid-tile>
