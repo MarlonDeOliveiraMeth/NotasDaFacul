@@ -14,6 +14,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInput, MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { MatInput, MatInputModule } from '@angular/material/input';
     MatToolbarModule, MatCardModule,
     MatGridListModule, MatButtonModule,
     MatFormFieldModule, MatInput,
-    MatInputModule
+    MatInputModule, FormsModule
   ],
   providers: [
     provideAnimationsAsync()

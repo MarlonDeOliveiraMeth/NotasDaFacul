@@ -8,10 +8,4 @@ import { NgForm } from '@angular/forms'
   styleUrl: './grade-details-form.component.css'
 })
 export class GradeDetailsFormComponent {
-  constructor(public service: GradeDetailsService) {
-  }
-
-  onSubmit(form: NgForm) {
-
-  }
 }

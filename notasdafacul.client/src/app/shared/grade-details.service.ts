@@ -23,4 +23,8 @@ export class GradeDetailsService {
       }
     })
   }
+
+  postGradeDetails() {
+    return this.http.post(this.url, this.formData);
+  }
 }
