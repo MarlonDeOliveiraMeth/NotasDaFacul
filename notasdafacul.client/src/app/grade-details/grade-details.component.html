@@ -1,14 +1,54 @@
-<app-grade-details-form />
-<table>
-  <tr *ngFor="let gd of service.list">
-    <td>
-      {{gd.course}}
-    </td>
-    <td>
-      {{gd.grade}}
-    </td>
-    <td>
-      {{gd.date}}
-    </td>
-  </tr>
-</table>
+<mat-toolbar-row>
+  <span>Notas da Facul</span>
+</mat-toolbar-row>
+<mat-grid-list cols="2" rowHeight="1:1">
+  <mat-grid-tile>
+    <mat-card>
+      <h6>Meu histórico</h6>
+
+      <table mat-table [dataSource]="service.list" class="mat-elevation-z8">
+        <ng-container matColumnDef="course">
+          <th mat-header-cell *matHeaderCellDef> Curso </th>
+          <td mat-cell *matCellDef="let element"> {{element.course}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="grade">
+          <th mat-header-cell *matHeaderCellDef> Nota </th>
+          <td mat-cell *matCellDef="let element"> {{element.grade}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef> Data </th>
+          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+      </table>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card>
+      <h6>Inserir nota</h6>
+
+      <mat-form-field appearance="outline">
+        <mat-label> Curso </mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label> Nota </mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label> Data </mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <button mat-flat-button>Enviar</button>
+
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

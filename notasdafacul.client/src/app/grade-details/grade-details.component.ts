@@ -13,6 +13,8 @@ export class GradeDetailsComponent implements OnInit {
   }
   ngOnInit(): void {
     this.service.refreshList();
-    }
+  }
+
+  columnsToDisplay: string[] = ['course', 'grade', 'date'];
 
 }
