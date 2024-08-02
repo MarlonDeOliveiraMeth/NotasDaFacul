@@ -1,0 +1,28 @@
+.toolbar {
+  background-color: #d7e3ff;
+  position: fixed;
+  top: 0;
+}
+
+.toolbar-title {
+  font-weight: 600;
+  color: #005cbb;
+}
+
+.card-title {
+  font-weight: 600;
+  color: #005cbb;
+  font-size: 18px;
+}
+
+.input-field {
+  background-color: #ffffff;
+}
+
+.card {
+  background-color: #d7e3ff;
+  width: 700px;
+  height: auto;
+}
+
+
