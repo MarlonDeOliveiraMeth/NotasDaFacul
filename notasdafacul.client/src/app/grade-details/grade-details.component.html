@@ -4,55 +4,56 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-  <mat-grid-list cols="2" rowHeight="1:1">
-    <mat-grid-tile>
-      <mat-card class="card">
-        <p class="card-title">Meu histórico</p>
+<mat-grid-list cols="2" rowHeight="1:1" class="responsive-grid">
+  <mat-grid-tile>
+    <mat-card class="card">
+      <p class="card-title">Meu histórico</p>
 
-        <table mat-table [dataSource]="service.list">
-          <ng-container matColumnDef="course">
-            <th mat-header-cell *matHeaderCellDef> Curso </th>
-            <td mat-cell *matCellDef="let element"> {{element.course}} </td>
-          </ng-container>
+      <table mat-table [dataSource]="service.list">
+        <ng-container matColumnDef="course">
+          <th mat-header-cell *matHeaderCellDef> Curso </th>
+          <td mat-cell *matCellDef="let element"> {{element.course}} </td>
+        </ng-container>
 
-          <ng-container matColumnDef="grade">
-            <th mat-header-cell *matHeaderCellDef> Nota </th>
-            <td mat-cell *matCellDef="let element"> {{element.grade}} </td>
-          </ng-container>
+        <ng-container matColumnDef="grade">
+          <th mat-header-cell *matHeaderCellDef> Nota </th>
+          <td mat-cell *matCellDef="let element"> {{element.grade}} </td>
+        </ng-container>
 
-          <ng-container matColumnDef="date">
-            <th mat-header-cell *matHeaderCellDef> Data </th>
-            <td mat-cell *matCellDef="let element"> {{element.date}} </td>
-          </ng-container>
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef> Data </th>
+          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
 
-          <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-          <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
-        </table>
-      </mat-card>
-    </mat-grid-tile>
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+      </table>
+    </mat-card>
+  </mat-grid-tile>
 
-    <mat-grid-tile>
-      <mat-card class="card">
-        <p class="card-title">Inserir nota</p>
-        <form #form="ngForm" (submit)="onSubmit(form)">
-          <mat-form-field appearance="outline" class="input-field">
-            <mat-label> Curso </mat-label>
-            <input matInput type="text" #course="ngModel" name="course" [(ngModel)]="service.formData.course">
-          </mat-form-field>
+  <mat-grid-tile>
+    <mat-card class="card">
+      <p class="card-title">Inserir nota</p>
+      <form #form="ngForm" (submit)="onSubmit(form)">
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label> Curso </mat-label>
+          <input matInput type="text" #course="ngModel" name="course" [(ngModel)]="service.formData.course">
+        </mat-form-field>
 
-          <mat-form-field appearance="outline" class="input-field">
-            <mat-label> Nota </mat-label>
-            <input matInput type="number" #grade="ngModel" name="grade" [(ngModel)]="service.formData.grade">
-          </mat-form-field>
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label> Nota </mat-label>
+          <input matInput type="number" #grade="ngModel" name="grade" [(ngModel)]="service.formData.grade">
+        </mat-form-field>
 
-          <mat-form-field appearance="outline" class="input-field">
-            <mat-label> Data </mat-label>
-            <input matInput type="date" #date="ngModel" name="course" [(ngModel)]="service.formData.date">
-          </mat-form-field>
-        </form>
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label> Data </mat-label>
+          <input matInput [matDatepicker]="picker" #date="ngModel" name="date" [(ngModel)]="service.formData.date">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
 
         <button mat-flat-button type="submit">Enviar</button>
-
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+      </form>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

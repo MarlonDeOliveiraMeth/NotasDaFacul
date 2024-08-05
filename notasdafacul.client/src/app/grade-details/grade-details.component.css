@@ -16,13 +16,24 @@
 }
 
 .input-field {
-  background-color: #ffffff;
+  width: 100%;
 }
 
 .card {
   background-color: #d7e3ff;
   width: 700px;
   height: auto;
+  padding: 16px;
 }
 
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
 
+@media (max-width: 600px) {
+  .responsive-grid {
+    grid-template-columns: 1fr;
+  }
+}
