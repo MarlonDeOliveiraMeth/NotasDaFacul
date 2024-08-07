@@ -17,10 +17,12 @@ export class GradeDetailsComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     if (this.service.formData.id == 0) {
-      this.insertRecord(form)
+      this.insertRecord(form);
+      window.location.reload();
     }
     else {
-      this.updateRecord(form)
+      this.updateRecord(form);
+      window.location.reload();
     }
   }
 
@@ -67,6 +69,7 @@ export class GradeDetailsComponent implements OnInit {
         error: err => {
           console.log(err)
         }
-      })
+      });
+    window.location.reload();
   }
 }
