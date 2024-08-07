@@ -1,4 +1,4 @@
-# NotasDaFacul
+# Notas Da Facul
 
 Tá na faculdade e quer ir acompanhando o seu desempenho ao longo do curso? Já vai se formar e quer guardar as suas notas de lembrança? Esse app com certeza é para você!
 
