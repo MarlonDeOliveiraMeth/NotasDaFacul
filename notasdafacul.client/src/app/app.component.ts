@@ -8,6 +8,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   styleUrl: './app.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
 export class AppComponent {
   title = 'notasdafacul.client';
 }

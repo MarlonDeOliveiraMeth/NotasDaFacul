@@ -7,5 +7,7 @@ import { NgForm } from '@angular/forms'
   templateUrl: './grade-details-form.component.html',
   styleUrl: './grade-details-form.component.css'
 })
+
 export class GradeDetailsFormComponent {
+
 }

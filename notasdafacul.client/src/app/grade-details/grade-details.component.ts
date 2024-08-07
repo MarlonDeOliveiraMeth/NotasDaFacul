@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GradeDetailsService } from '../shared/grade-details.service';
 import { NgForm } from '@angular/forms'
+import { GradeDetails } from '../shared/grade-details.model';
 
 
 @Component({
@@ -15,6 +16,25 @@ export class GradeDetailsComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
+    if (this.service.formData.id == 0) {
+      this.insertRecord(form)
+    }
+    else {
+      this.updateRecord(form)
+    }
+  }
+
+  ngOnInit(): void {
+    this.service.refreshList();
+  }
+
+  columnsToDisplay: string[] = ['course', 'grade', 'date', 'delete'];
+
+  populateForm(selectedRecord: GradeDetails) {
+    this.service.formData = Object.assign({}, selectedRecord);
+  }
+
+  insertRecord(form: NgForm) {
     this.service.postGradeDetails()
       .subscribe({
         next: res => {
@@ -26,10 +46,27 @@ export class GradeDetailsComponent implements OnInit {
       })
   }
 
-  ngOnInit(): void {
-    this.service.refreshList();
+  updateRecord(form: NgForm) {
+    this.service.putGradeDetails()
+      .subscribe({
+        next: res => {
+          console.log(res)
+        },
+        error: err => {
+          console.log(err)
+        }
+      })
   }
 
-  columnsToDisplay: string[] = ['course', 'grade', 'date'];
-
+  deleteRecord(id : number) {
+    this.service.deleteGradeDetails(id)
+      .subscribe({
+        next: res => {
+          console.log(res)
+        },
+        error: err => {
+          console.log(err)
+        }
+      })
+  }
 }
