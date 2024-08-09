@@ -15,7 +15,7 @@ export class GradeDetailsComponent implements OnInit {
 
   }
 
-  onSubmit(form: NgForm) {
+  onSubmit(form : NgForm) {
     if (this.service.formData.id == 0) {
       this.insertRecord(form);
       window.location.reload();
@@ -36,7 +36,7 @@ export class GradeDetailsComponent implements OnInit {
     this.service.formData = Object.assign({}, selectedRecord);
   }
 
-  insertRecord(form: NgForm) {
+  insertRecord(form : NgForm) {
     this.service.postGradeDetails()
       .subscribe({
         next: res => {
@@ -48,7 +48,7 @@ export class GradeDetailsComponent implements OnInit {
       })
   }
 
-  updateRecord(form: NgForm) {
+  updateRecord(form : NgForm) {
     this.service.putGradeDetails()
       .subscribe({
         next: res => {

@@ -1,12 +1,12 @@
 .toolbar {
-  background-color: #d7e3ff;
+  background-color: #005cbb;
   position: fixed;
   top: 0;
 }
 
 .toolbar-title {
   font-weight: 600;
-  color: #005cbb;
+  color: #ffffff;
 }
 
 .card-title {
@@ -26,10 +26,13 @@
 }
 
 .card {
-  background-color: #d7e3ff;
   width: 700px;
   height: auto;
   padding: 16px;
+}
+
+.send-button {
+  background: #ffb3ba;
 }
 
 .responsive-grid {
