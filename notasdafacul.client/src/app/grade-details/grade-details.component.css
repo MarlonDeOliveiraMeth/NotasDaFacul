@@ -2,6 +2,7 @@
   background-color: #005cbb;
   position: fixed;
   top: 0;
+  z-index: 999;
 }
 
 .toolbar-title {
@@ -39,10 +40,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;
+  margin-top: 0px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .responsive-grid {
-    grid-template-columns: 1fr;
+    margin-top: 30px;
   }
 }

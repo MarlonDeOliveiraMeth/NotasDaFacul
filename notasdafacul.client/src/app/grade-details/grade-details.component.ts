@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { GradeDetailsService } from '../shared/grade-details.service';
 import { NgForm } from '@angular/forms'
 import { GradeDetails } from '../shared/grade-details.model';
@@ -11,8 +11,10 @@ import { GradeDetails } from '../shared/grade-details.model';
 })
 export class GradeDetailsComponent implements OnInit {
 
-  constructor(public service: GradeDetailsService) {
+  gridCols: number = 0;
 
+  constructor(public service: GradeDetailsService) {
+    this.setGridCols(window.innerWidth)
   }
 
   onSubmit(form : NgForm) {
@@ -71,5 +73,18 @@ export class GradeDetailsComponent implements OnInit {
         }
       });
     window.location.reload();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: { target: { innerWidth: number; }; }) {
+    this.setGridCols(event.target.innerWidth);
+  }
+
+  setGridCols(width: number) {
+    if (width < 768) {
+      this.gridCols = 1;
+    } else {
+      this.gridCols = 2;
+    }
   }
 }

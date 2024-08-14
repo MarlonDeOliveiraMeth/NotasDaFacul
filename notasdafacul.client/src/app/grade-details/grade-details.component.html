@@ -4,7 +4,7 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-grid-list cols="2" rowHeight="1:1" class="responsive-grid">
+<mat-grid-list [cols]="gridCols" rowHeight="1:1" class="responsive-grid">
   <mat-grid-tile>
     <mat-card class="card">
       <p class="card-title">Meu histórico</p>
@@ -22,7 +22,7 @@
 
         <ng-container matColumnDef="date">
           <th mat-header-cell *matHeaderCellDef> Data </th>
-          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+          <td mat-cell *matCellDef="let element"> {{ element.date | date:'dd/MM/yyyy' }} </td>
         </ng-container>
 
         <ng-container matColumnDef="delete">
