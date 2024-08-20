@@ -17,6 +17,8 @@ import { MatInput, MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { MAT_DATE_FORMATS, MAT_DATE_LOCALE, DateAdapter, MatNativeDateModule } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DeleteDialogComponent } from './grade-details/delete-dialog/delete-dialog.component';
 
 export const MY_DATE_FORMATS = {
   parse: {
@@ -34,7 +36,8 @@ export const MY_DATE_FORMATS = {
   declarations: [
     AppComponent,
     GradeDetailsComponent,
-    GradeDetailsFormComponent
+    GradeDetailsFormComponent,
+    DeleteDialogComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
@@ -43,7 +46,7 @@ export const MY_DATE_FORMATS = {
     MatGridListModule, MatButtonModule,
     MatFormFieldModule, MatInput,
     MatInputModule, FormsModule,
-    MatDatepickerModule
+    MatDatepickerModule, MatDialogModule
   ],
   providers: [
     provideAnimationsAsync(),

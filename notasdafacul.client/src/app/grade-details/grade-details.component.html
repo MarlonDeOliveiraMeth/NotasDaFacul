@@ -40,26 +40,34 @@
   <mat-grid-tile>
     <mat-card class="card">
       <p class="card-title">Inserir nota</p>
-      <form #form="ngForm" (submit)="onSubmit(form)">
+      <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
         <mat-form-field appearance="outline" class="input-field">
           <mat-label> Curso </mat-label>
-          <input matInput type="text" #course="ngModel" name="course" [(ngModel)]="service.formData.course" required autocomplete="off">
+          <input matInput type="text" name="course" [(ngModel)]="service.formData.course" #course="ngModel" required autocomplete="off">
+          <mat-error *ngIf="course.invalid && (course.dirty || course.touched)">
+            O curso é obrigatório
+          </mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="input-field">
           <mat-label> Nota </mat-label>
-          <input matInput type="number" #grade="ngModel" name="grade" [(ngModel)]="service.formData.grade" required autocomplete="off">
+          <input matInput type="number" name="grade" [(ngModel)]="service.formData.grade" #grade="ngModel" required min="0" max="10" autocomplete="off">
+          <mat-error *ngIf="grade.invalid && (grade.dirty || grade.touched)">
+            A nota deve estar entre 0 e 10
+          </mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="input-field">
           <mat-label> Data </mat-label>
-          <input matInput [matDatepicker]="picker" #date="ngModel" name="date" [(ngModel)]="service.formData.date" required autocomplete="off">
+          <input matInput [matDatepicker]="picker" name="date" [(ngModel)]="service.formData.date" #date="ngModel" required autocomplete="off">
           <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="date.invalid && (date.dirty || date.touched)">
+            A data é obrigatória
+          </mat-error>
         </mat-form-field>
 
-        <button mat-flat-button type="submit">Enviar</button>
+        <button mat-flat-button type="submit" [disabled]="form.invalid">Enviar</button>
       </form>
     </mat-card>
   </mat-grid-tile>
-</mat-grid-list>
