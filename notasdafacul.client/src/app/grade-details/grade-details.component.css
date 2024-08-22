@@ -1,5 +1,5 @@
 .toolbar {
-  background-color: #005cbb;
+  background: linear-gradient(93.38deg, #92278F 0%, #EF4136 48.88%, #FBB040 100%);
   position: fixed;
   top: 0;
   z-index: 999;
@@ -18,7 +18,7 @@
 
 .card-subtitle {
   font-weight: 500;
-  color: #005cbb;
+  color: #92278F;
   font-size: 14px;
 }
 

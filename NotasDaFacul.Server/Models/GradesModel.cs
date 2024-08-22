@@ -14,9 +14,9 @@ namespace NotasDaFacul.Server.Models
         public string? Course { get; set; }
 
         [Required]
-        [Column(TypeName = "numeric(2)")]
-        [Range(0, 10)]
-        public int Grade { get; set; }
+        [Column(TypeName = "decimal(3, 1)")]
+        [Range(0.0, 10.0)]
+        public decimal Grade { get; set; }
 
         [Required]
         [DataType(DataType.Date)]

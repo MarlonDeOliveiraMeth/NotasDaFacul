@@ -51,7 +51,7 @@
 
         <mat-form-field appearance="outline" class="input-field">
           <mat-label> Nota </mat-label>
-          <input matInput type="number" name="grade" [(ngModel)]="service.formData.grade" #grade="ngModel" required min="0" max="10" autocomplete="off">
+          <input matInput type="number" name="grade" [(ngModel)]="service.formData.grade" #grade="ngModel" required min="0" max="10" step="0.1" autocomplete="off">
           <mat-error *ngIf="grade.invalid && (grade.dirty || grade.touched)">
             A nota deve estar entre 0 e 10
           </mat-error>

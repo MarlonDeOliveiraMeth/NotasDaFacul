@@ -73,7 +73,7 @@ export class GradeDetailsComponent implements OnInit {
           this.service.deleteGradeDetails(id).subscribe({
             next: () => {
               console.log(res);
-              window.location.reload();
+              this.service.refreshList();
             },
             error: err => {
               console.log(err);
