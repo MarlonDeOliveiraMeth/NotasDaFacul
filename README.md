@@ -6,5 +6,4 @@ Nesse aplicativo feito com Angular e ASP.NET Core, o usuário é capaz de, em um
 
 Essa é uma aplicação bastante simples, mas foi feita com o propósito de marcar e relembrar os meus tempos no curso de Engenharia da Computação na Athon Ensino Superior, que guardarei para sempre com bastante carinho.
 
-![image](https://github.com/user-attachments/assets/b6707fe9-0321-4891-ba02-f1057626d3e7)
-
+![image](https://github.com/user-attachments/assets/09fbb291-3fa6-40f2-902b-13e19fc36091)
