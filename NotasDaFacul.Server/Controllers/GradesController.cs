@@ -25,7 +25,10 @@ namespace NotasDaFacul.Server.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<GradesModel>>> GetGradesModel()
         {
-            return await _context.GradesModel.ToListAsync();
+            return await _context.GradesModel.OrderBy(entry => entry.Date.Year)
+                .ThenBy(entry => entry.Date.Month)
+                .ThenBy(entry => entry.Date.Day)
+                .ToListAsync();
         }
 
         // GET: api/Grades/5
